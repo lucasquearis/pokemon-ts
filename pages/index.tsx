@@ -61,7 +61,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Home: NextPage = ({ pokemons }: IHomeProps) => {
   return (
-    <div className="mx-auto mt-40 flex w-full max-w-[1200px] flex-col items-center justify-center">
+    <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-center pt-40">
       <div className="flex w-96 flex-col gap-8">
         <Image src={PokeLogo} alt="Logo Pokemon" />
         <input
@@ -69,7 +69,7 @@ const Home: NextPage = ({ pokemons }: IHomeProps) => {
           placeholder="Busque aqui seu pokemon!"
         />
       </div>
-      <div className="my-24 flex flex-wrap items-center justify-center gap-2">
+      <div className="my-24 flex flex-wrap items-center justify-center gap-5">
         {pokemons?.map((pokemon) => (
           <Card key={pokemon.pokeNumber} pokemon={pokemon} />
         ))}

@@ -7,11 +7,9 @@ interface IPokemon {
 }
 
 export default function Card({ pokemon }: IPokemon): ReactElement {
-  console.log(pokemon);
   return (
-    <div className="flex h-60 w-60 flex-col items-center justify-between p-4 shadow">
-      <p>{pokemon.pokemonName}</p>
-      <p>{`#${pokemon.pokeNumber}`}</p>
+    <div className="flex h-60 w-60 flex-col items-center justify-evenly bg-white p-4 shadow">
+      <p>{`#${pokemon.pokeNumber} ${pokemon.pokemonName}`}</p>
       <div>
         <Image
           src={
