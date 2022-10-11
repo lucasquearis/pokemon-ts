@@ -6,7 +6,7 @@ import Header from "../templates/Header";
 
 function MyApp({ Component, pageProps }: AppProps): ReactNode {
   return (
-    <div className="mx-auto w-screen">
+    <div className="mx-auto w-full">
       <Header />
       <Component {...pageProps} />
       <Footer />
